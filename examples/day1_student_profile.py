@@ -1,0 +1,15 @@
+print("Student Profile Generator")
+print("-------------------------")
+
+name = input("Enter your name: ")
+city = input("Enter your city: ")
+goal = input("Enter your learning goal: ")
+daily_hours = input("How many hours will you practice daily? ")
+
+print("")
+print("Profile Summary")
+print("Name:", name)
+print("City:", city)
+print("Goal:", goal)
+print("Daily Practice:", daily_hours, "hours")
+print("Message:", name, "is ready to learn Python step by step.")

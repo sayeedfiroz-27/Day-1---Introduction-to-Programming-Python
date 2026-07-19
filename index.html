@@ -6,9 +6,9 @@
 <title>Day 1 - Introduction to Programming & Python</title>
 <style>
   :root {
-    --ink: #152238;
+    --ink: #172033;
     --muted: #526173;
-    --brand: #1d4ed8;
+    --brand: #2457a6;
     --teal: #0f766e;
     --amber: #b45309;
     --rose: #be123c;
@@ -20,7 +20,7 @@
     --line: #dbe4ef;
     --code: #0f172a;
     --paper: #ffffff;
-    --wash: #f6f8fb;
+    --wash: #f7f8fa;
   }
 
   * {
@@ -36,13 +36,9 @@
   }
 
   header {
-    background:
-      linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.72)),
-      url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1800&q=80");
-    background-size: cover;
-    background-position: center;
+    background: #172033;
     color: white;
-    padding: 58px 22px 46px;
+    padding: 38px 22px 34px;
   }
 
   .hero-inner,
@@ -55,8 +51,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 13px;
-    border-radius: 999px;
+    padding: 7px 11px;
+    border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.38);
     background: rgba(255, 255, 255, 0.14);
     font-weight: 800;
@@ -66,20 +62,20 @@
   h1 {
     max-width: 900px;
     margin: 18px 0 12px;
-    font-size: clamp(34px, 5vw, 58px);
-    line-height: 1.08;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.15;
     letter-spacing: 0;
   }
 
   .hero-copy {
     max-width: 880px;
-    color: #e6eefb;
-    font-size: 18px;
+    color: #edf4ff;
+    font-size: 17px;
   }
 
   main {
     background: var(--paper);
-    padding: 30px 22px 80px;
+    padding: 28px 22px 80px;
   }
 
   nav {
@@ -139,21 +135,23 @@
   }
 
   .section-title {
-    margin: 42px 0 16px;
-    padding: 18px;
+    margin: 36px 0 14px;
+    padding: 14px 16px;
     border-radius: 8px;
-    background: #152238;
+    background: #eef4ff;
+    border-left: 5px solid var(--brand);
     color: white;
   }
 
   .section-title h2 {
     margin: 0;
-    font-size: 28px;
+    font-size: 25px;
+    color: var(--ink);
   }
 
   .section-title p {
     margin: 8px 0 0;
-    color: #dbeafe;
+    color: var(--muted);
   }
 
   h2,
@@ -268,6 +266,11 @@
     font-size: 17px;
   }
 
+  .simple-note {
+    background: #fff;
+    border: 1px dashed #b7c4d6;
+  }
+
   footer {
     border-top: 1px solid var(--line);
     margin-top: 42px;
@@ -312,6 +315,7 @@
         <li><a href="#running">Running Python Scripts</a></li>
         <li><a href="#interpreter">Interpreter Basics</a></li>
         <li><a href="#first-program">First Python Program</a></li>
+        <li><a href="#profile-lab">Student Profile Practical</a></li>
         <li><a href="#homework">Recap & Homework</a></li>
       </ol>
     </div>
@@ -607,7 +611,8 @@ current_day = 1
 print("Hello", student_name)
 print("Course:", course_name)
 print("Today is Day", current_day, "out of", total_days)
-print("By Day 15, you will understand Python basics, data handling, and ML project flow.")</code></pre>
+print("By Day 15, you will understand Python basics, data handling, and ML project flow.")
+print("Today's promise:", student_name, "will write Python code daily.")</code></pre>
 
   <h3>Expected Output Example</h3>
   <span class="code-label">Terminal</span>
@@ -616,7 +621,8 @@ Enter your name: Rahul
 Hello Rahul
 Course: Python for Data Science & Machine Learning
 Today is Day 1 out of 15
-By Day 15, you will understand Python basics, data handling, and ML project flow.</code></pre>
+By Day 15, you will understand Python basics, data handling, and ML project flow.
+Today's promise: Rahul will write Python code daily.</code></pre>
 
   <h3>Line-by-Line Explanation - Simple Hinglish</h3>
   <table>
@@ -630,6 +636,7 @@ By Day 15, you will understand Python basics, data handling, and ML project flow
     <tr><td><span class="inline-code">print("Course:", course_name)</span></td><td>Yahan <span class="inline-code">Course:</span> label print hota hai, phir <span class="inline-code">course_name</span> variable ki value print hoti hai. Isse output readable banta hai.</td></tr>
     <tr><td><span class="inline-code">print("Today is Day", current_day, "out of", total_days)</span></td><td>Is line mein fixed text aur variables mix hain. Python pehle text print karta hai, phir <span class="inline-code">current_day</span> ki value, phir text <span class="inline-code">out of</span>, phir <span class="inline-code">total_days</span> ki value. Output sentence jaisa ban jata hai.</td></tr>
     <tr><td><span class="inline-code">print("By Day 15, you will understand Python basics, data handling, and ML project flow.")</span></td><td>Ye motivation line hai. Programming class mein emotional confidence bhi important hota hai. Student ko clear destination milta hai ki aage kya seekhne wale hain.</td></tr>
+    <tr><td><span class="inline-code">print("Today's promise:", student_name, "will write Python code daily.")</span></td><td>Ye line same variable ko dobara use karti hai. Student ka naam output mein personal commitment ke saath print hota hai, isliye program zyada interesting feel hota hai.</td></tr>
   </table>
 
   <div class="box script">
@@ -638,6 +645,7 @@ By Day 15, you will understand Python basics, data handling, and ML project flow
     <p>Second important line hai <span class="inline-code">student_name = input("Enter your name: ")</span>. Yahan hum user se name pooch rahe hain. <span class="inline-code">input()</span> screen par prompt show karta hai aur keyboard se typed value receive karta hai. Jo value user type karega, woh <span class="inline-code">student_name</span> variable mein store hogi. Variable ko ek labelled container samjho. Label hai <span class="inline-code">student_name</span>, aur container ke andar user ka naam rakha hua hai.</p>
     <p>Next lines mein hum course name, total days, aur current day store kar rahe hain. Yahan ek important observation hai: course name text hai, isliye quotes mein hai. Total days aur current day numbers hain, isliye quotes mein nahi hain. Day 2 mein hum data types detail mein karenge, lekin aaj se hi ye observe karna start karo ki Python mein text aur number alag tarah treat hote hain.</p>
     <p>Last print lines mein hum fixed text aur variables ko combine karke output bana rahe hain. Jab hum comma use karte hain, Python automatically values ke beech space add kar deta hai. Isse beginner ke liye sentence banana easy ho jata hai. Aage hum f-string bhi seekhenge, lekin Day 1 ke liye comma style simple aur readable hai.</p>
+    <p>Promise line ko class mein thoda personal banao. Har student apna naam enter karega, aur output mein uska naam commitment ke saath print hoga. Beginner ko jab apna naam output mein dikhta hai, toh program uske liye real feel hota hai.</p>
   </div>
 
   <h3>Important Concepts from This Practical</h3>
@@ -648,8 +656,85 @@ By Day 15, you will understand Python basics, data handling, and ML project flow
     <div class="box"><h4>String</h4><p>Quotes ke andar likha hua text string hota hai.</p></div>
   </div>
 
+  <section id="profile-lab" class="section-title">
+    <h2>9. Practical Lab - Student Profile Generator</h2>
+    <p>5-hour session ke liye detailed guided practical.</p>
+  </section>
+
+  <div class="box simple-note">
+    <h3>Lab Goal</h3>
+    <p>Is lab mein students ek chhota sa Student Profile Generator banayenge. Program student ka name, city, learning goal, aur daily practice hours input lega. Phir program ek clean profile summary print karega. Ye practical beginner-friendly hai, lekin output personalized hai, isliye students ko interesting lagega.</p>
+    <p>Teacher flow simple rakho: pehle aap output dikhao, phir code type karvao, phir har line explain karo, phir students ko modifications do. Is practical se input, output, variables, strings, blank line, readable output, and debugging ka base clear hoga.</p>
+  </div>
+
+  <span class="code-label">examples/day1_student_profile.py</span>
+  <pre><code>print("Student Profile Generator")
+print("-------------------------")
+
+name = input("Enter your name: ")
+city = input("Enter your city: ")
+goal = input("Enter your learning goal: ")
+daily_hours = input("How many hours will you practice daily? ")
+
+print("")
+print("Profile Summary")
+print("Name:", name)
+print("City:", city)
+print("Goal:", goal)
+print("Daily Practice:", daily_hours, "hours")
+print("Message:", name, "is ready to learn Python step by step.")</code></pre>
+
+  <h3>Expected Output Example</h3>
+  <span class="code-label">Terminal</span>
+  <pre><code>Student Profile Generator
+-------------------------
+Enter your name: Ayesha
+Enter your city: Delhi
+Enter your learning goal: Data Science
+How many hours will you practice daily? 2
+
+Profile Summary
+Name: Ayesha
+City: Delhi
+Goal: Data Science
+Daily Practice: 2 hours
+Message: Ayesha is ready to learn Python step by step.</code></pre>
+
+  <div class="box script">
+    <h3>Direct Reading Script - Student Profile Practical</h3>
+    <p>Ab hum ek interesting program banayenge jiska naam hai Student Profile Generator. Is program mein computer humse kuch questions poochega: name, city, learning goal, aur daily practice hours. Phir computer humare answers ko use karke ek profile summary print karega. Real websites mein bhi forms hote hain jahan user data enter karta hai, phir system us data ko process karke display karta hai. Ye usi idea ka beginner version hai.</p>
+    <p>First two lines program ka title print kar rahi hain. Title dene se output professional lagta hai. Next lines input leti hain. Har input ko alag variable mein store kiya gaya hai: <span class="inline-code">name</span>, <span class="inline-code">city</span>, <span class="inline-code">goal</span>, aur <span class="inline-code">daily_hours</span>. Yahan students ko samjhana hai ki variable ka naam meaningful hona chahiye. Meaningful names code ko readable banate hain.</p>
+    <p><span class="inline-code">print("")</span> ek blank line print karta hai. Ye output ko clean banata hai. Programming mein sirf code chalna important nahi hai; output readable hona bhi important hai. Last lines profile summary print kar rahi hain. Yahan fixed labels jaise <span class="inline-code">Name:</span> aur variables ko combine kiya gaya hai. Isse output structured lagta hai.</p>
+    <p>Is practical ke end mein students ko bolna hai ki apna real goal likhein. Kisi ka goal data analyst banna ho sakta hai, kisi ka automation seekhna ho sakta hai, kisi ka ML project banana ho sakta hai. Jab program unka goal print karega, class mein personal connection banega.</p>
+  </div>
+
+  <h3>Student Profile Code - Line by Line</h3>
+  <table>
+    <tr><th>Line</th><th>Simple Explanation</th></tr>
+    <tr><td><span class="inline-code">print("Student Profile Generator")</span></td><td>Program ka heading screen par print hota hai. Heading se user ko samajh aata hai program kis kaam ke liye hai.</td></tr>
+    <tr><td><span class="inline-code">print("-------------------------")</span></td><td>Ye separator hai. Output ko clean aur readable banata hai.</td></tr>
+    <tr><td><span class="inline-code">name = input("Enter your name: ")</span></td><td>User se name poochta hai aur answer <span class="inline-code">name</span> variable mein store karta hai.</td></tr>
+    <tr><td><span class="inline-code">city = input("Enter your city: ")</span></td><td>User se city poochta hai. City value ko baad mein summary mein use karenge.</td></tr>
+    <tr><td><span class="inline-code">goal = input("Enter your learning goal: ")</span></td><td>User ka learning goal store hota hai. Isse program personal feel hota hai.</td></tr>
+    <tr><td><span class="inline-code">daily_hours = input("How many hours will you practice daily? ")</span></td><td>User se daily practice hours poochta hai. Day 2 mein hum discuss karenge ki input by default string hota hai.</td></tr>
+    <tr><td><span class="inline-code">print("")</span></td><td>Blank line print hoti hai. Output sections ke beech gap aata hai.</td></tr>
+    <tr><td><span class="inline-code">print("Profile Summary")</span></td><td>Final output section ka title print hota hai.</td></tr>
+    <tr><td><span class="inline-code">print("Name:", name)</span></td><td>Label aur user ka entered name print hota hai.</td></tr>
+    <tr><td><span class="inline-code">print("Daily Practice:", daily_hours, "hours")</span></td><td>Fixed text, variable, aur unit ko combine karke readable sentence banaya gaya hai.</td></tr>
+    <tr><td><span class="inline-code">print("Message:", name, "is ready to learn Python step by step.")</span></td><td>Variable ko sentence ke beech mein use kiya gaya hai. Isse dynamic message banta hai.</td></tr>
+  </table>
+
+  <div class="box practice">
+    <h3>Practical Timing for 5-Hour Session</h3>
+    <p><strong>First 10 minutes:</strong> Teacher code run karke expected output dikhaye. Students sirf observe karein.</p>
+    <p><strong>Next 20 minutes:</strong> Students code type karein. Teacher spelling, quotes, brackets, save/run flow check kare.</p>
+    <p><strong>Next 20 minutes:</strong> Har line ka explanation. Students se pucho: variable ka naam kya hai, input prompt kya hai, output label kya hai.</p>
+    <p><strong>Next 20 minutes:</strong> Students modifications karein: age add karo, college add karo, favorite technology add karo.</p>
+    <p><strong>Last 10 minutes:</strong> 3 students apna output class mein show/read karein. Teacher common mistakes recap kare.</p>
+  </div>
+
   <section class="section-title">
-    <h2>9. Classroom Practice Tasks</h2>
+    <h2>10. Classroom Practice Tasks</h2>
     <p>Students ko typing aur small modification karwana zaroori hai.</p>
   </section>
 
@@ -674,16 +759,50 @@ print("My goal is", goal)</code></pre>
   </div>
 
   <div class="box practice">
-    <h3>Task 2 - Course Commitment Program</h3>
+    <h3>Task 2 - Mini ID Card Program</h3>
+    <p>Student ek mini ID card output banaye. Isme name, course, batch, city, aur goal print hona chahiye. Is task se students ko readable output formatting ka idea milega.</p>
+    <span class="code-label">Starter Code</span>
+    <pre><code>name = input("Name: ")
+course = input("Course: ")
+batch = input("Batch: ")
+city = input("City: ")
+goal = input("Goal: ")
+
+print("")
+print("----- Student ID Card -----")
+print("Name:", name)
+print("Course:", course)
+print("Batch:", batch)
+print("City:", city)
+print("Goal:", goal)
+print("---------------------------")</code></pre>
+  </div>
+
+  <div class="box practice">
+    <h3>Task 3 - Course Commitment Program</h3>
     <p>Student course name aur daily study hours enter kare. Program commitment message print kare.</p>
-    <span class="code-label">Expected Thinking</span>
-    <pre><code>Course name input lo
-Daily study hours input lo
-Student ko motivational output do</code></pre>
+    <span class="code-label">Starter Code</span>
+    <pre><code>name = input("Enter your name: ")
+course = input("Enter course name: ")
+hours = input("Daily practice hours: ")
+
+print(name, "has joined", course)
+print(name, "will practice", hours, "hours daily")
+print("Small daily practice will create big improvement.")</code></pre>
+  </div>
+
+  <div class="box practice">
+    <h3>Task 4 - Error Challenge</h3>
+    <p>Teacher board par intentionally wrong code likhe. Students ko error find karna hai. Isse debugging ek fun activity ban jaati hai.</p>
+    <span class="code-label">Wrong Code</span>
+    <pre><code>pritn("Welcome")
+name = input("Enter name: "
+print("Hello", name)</code></pre>
+    <p>Students ko identify karna hai: <span class="inline-code">print</span> spelling wrong hai, input line mein closing bracket missing hai. Phir students correct code likhein.</p>
   </div>
 
   <section class="section-title">
-    <h2>10. Common Beginner Errors</h2>
+    <h2>11. Common Beginner Errors</h2>
     <p>Day 1 par errors normal hain. Error ka dar remove karna teacher ka kaam hai.</p>
   </section>
 
@@ -703,7 +822,7 @@ Student ko motivational output do</code></pre>
   </div>
 
   <section id="homework" class="section-title">
-    <h2>11. Recap, Homework, and Day 2 Hook</h2>
+    <h2>12. Recap, Homework, and Day 2 Hook</h2>
     <p>End strong. Students ko clear feel hona chahiye ki unhone kuch banaya hai.</p>
   </section>
 

@@ -10,3 +10,4 @@ print("Course:", course_name)
 print("Today is Day", current_day, "out of", total_days)
 print("By Day 15, you will understand Python basics, data handling, and ML project flow.")
 
+print("Today's promise:", student_name, "will write Python code daily.")
