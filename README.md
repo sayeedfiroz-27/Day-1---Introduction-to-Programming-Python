@@ -5,13 +5,14 @@ Classroom-ready Hinglish notes for Day 1 of a 15-day Python for Data Science and
 ## Files
 
 - `index.html` - Complete Day 1 teaching document with concepts, practicals, line-by-line code explanation, recap, and homework.
+- `teacher-delivery-notes.html` - Polished 5-hour teacher delivery notes written in natural Hinglish speaking style.
 - `learners-notes.html` - Simple English learner notes in paragraph format with code examples and practice tasks.
 - `examples/day1_practice.py` - Runnable Python practice file used in the lesson.
 - `examples/day1_student_profile.py` - Extra interesting practical for the 5-hour session.
 
 ## How to Use
 
-Open `index.html` in a browser and teach section by section. The paragraph blocks can be read directly in class. Ask students to type the code from `examples/day1_practice.py` themselves and run it.
+Open `teacher-delivery-notes.html` in a browser when you want a natural class speaking flow. Open `index.html` when you want the full structured teaching document. Ask students to type the code from `examples/day1_practice.py` and `examples/day1_student_profile.py` themselves and run it.
 
 ```bash
 python examples/day1_practice.py
