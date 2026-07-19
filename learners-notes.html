@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learner Notes - Day 1 Python</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #f7f8fa;
+    line-height: 1.8;
+  }
+
+  header {
+    background: #172033;
+    color: white;
+    padding: 34px 22px;
+  }
+
+  header,
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  main {
+    background: white;
+    padding: 28px 22px 70px;
+  }
+
+  h1 {
+    margin: 10px 0;
+    font-size: 38px;
+    line-height: 1.15;
+  }
+
+  h2 {
+    margin-top: 38px;
+    padding: 12px 14px;
+    border-left: 5px solid #2563eb;
+    background: #eef4ff;
+    color: #172033;
+    font-size: 25px;
+  }
+
+  h3 {
+    margin-top: 26px;
+    color: #2457a6;
+  }
+
+  p {
+    margin: 12px 0;
+    font-size: 17px;
+  }
+
+  ul,
+  ol {
+    padding-left: 24px;
+  }
+
+  li {
+    margin: 8px 0;
+  }
+
+  .note,
+  .practice,
+  .summary {
+    border: 1px solid #d8e1ee;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 18px 0;
+  }
+
+  .note {
+    background: #fbfdff;
+  }
+
+  .practice {
+    background: #f0fdf4;
+    border-left: 5px solid #15803d;
+  }
+
+  .summary {
+    background: #fff7ed;
+    border-left: 5px solid #c2410c;
+  }
+
+  .code-label {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 11px;
+    border-radius: 7px 7px 0 0;
+    background: #172033;
+    color: white;
+    font: 700 13px Consolas, Monaco, monospace;
+  }
+
+  pre {
+    margin: 0 0 18px;
+    padding: 16px;
+    overflow: auto;
+    border-radius: 0 8px 8px 8px;
+    background: #0f172a;
+    color: #e5edf7;
+    line-height: 1.55;
+    font-size: 15px;
+  }
+
+  code,
+  .inline-code {
+    font-family: Consolas, Monaco, monospace;
+  }
+
+  .inline-code {
+    padding: 2px 6px;
+    border-radius: 5px;
+    background: #e8eef7;
+    color: #111827;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 15px;
+  }
+
+  th,
+  td {
+    border: 1px solid #d8e1ee;
+    padding: 11px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: #172033;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background: #f8fafc;
+  }
+</style>
+</head>
+<body>
+<header>
+  <p>Day 1 Learner Notes</p>
+  <h1>Introduction to Programming and Python</h1>
+  <p>Simple English notes for students. Read slowly, type the code yourself, run it, and observe the output.</p>
+</header>
+
+<main>
+  <section class="note">
+    <h2>What You Will Learn Today</h2>
+    <p>Today is the first day of your Python learning journey. The goal of Day 1 is not to become an expert. The goal is to understand what programming means, why Python is useful, how Python code runs, and how to write your first small programs. If you understand the basic idea today, the next topics will become easier.</p>
+    <p>In this course, Python will be our main language. In the coming days, you will learn variables, data types, conditions, loops, functions, data structures, data science basics, and machine learning projects. Day 1 is the foundation for all those topics.</p>
+  </section>
+
+  <h2>1. What is Programming?</h2>
+  <p>Programming means giving step-by-step instructions to a computer. A computer does not understand our intention automatically. It only follows clear instructions. If the instruction is correct, the computer gives the correct output. If the instruction is wrong or incomplete, the computer may show an error or give the wrong result.</p>
+  <p>Think about making tea. A human may understand the short instruction "make tea", but a computer needs exact steps. First boil water, then add tea powder, then add milk, then add sugar, then boil again, and finally serve. Programming works in the same way. We break a task into small steps and write those steps in a programming language.</p>
+
+  <div class="summary">
+    <p><strong>Simple meaning:</strong> Programming is the process of telling a computer what to do, step by step.</p>
+  </div>
+
+  <h3>Program, Algorithm, and Code</h3>
+  <p>A program is a set of instructions written for a computer. An algorithm is the plan or logic behind the program. Code is the actual text that we write in a programming language. Before writing code, it is useful to think about the algorithm.</p>
+  <p>For example, if we want to add two numbers, the algorithm is simple: take the first number, take the second number, add both numbers, and show the answer. When we write this logic in Python, it becomes code.</p>
+
+  <table>
+    <tr><th>Term</th><th>Simple Meaning</th><th>Example</th></tr>
+    <tr><td>Program</td><td>A set of instructions for the computer.</td><td>A calculator program.</td></tr>
+    <tr><td>Algorithm</td><td>A step-by-step plan to solve a problem.</td><td>Take two numbers, add them, print result.</td></tr>
+    <tr><td>Code</td><td>Instructions written in a programming language.</td><td><span class="inline-code">print("Hello")</span></td></tr>
+  </table>
+
+  <h2>2. What is Python?</h2>
+  <p>Python is a popular programming language. It is known for simple and readable syntax. This means Python code looks closer to English compared to many other programming languages. Because of this, beginners can start learning programming with Python more comfortably.</p>
+  <p>Python is not only for beginners. It is also used by professionals in web development, automation, data science, artificial intelligence, machine learning, cyber security, and many other fields. This is why Python is a very useful language to learn.</p>
+
+  <h3>Why Python is Good for Beginners</h3>
+  <p>Python allows students to focus on logic instead of getting stuck in difficult syntax. For example, printing a message in Python needs only one simple line. This gives confidence to beginners because they can quickly write code and see output.</p>
+
+  <span class="code-label">Python</span>
+  <pre><code>print("Hello Python")</code></pre>
+
+  <p>This line tells Python to show the message <span class="inline-code">Hello Python</span> on the screen. The word <span class="inline-code">print</span> is a built-in function. A function is a ready-made action. The text inside double quotes is the message that will be displayed.</p>
+
+  <h2>3. Features of Python</h2>
+  <p>Python has many features that make it useful for students and professionals. The first feature is simple syntax. Python code is easy to read and write. The second feature is that Python is free and open source, so anyone can install it and practice without paying for a license.</p>
+  <p>Python also has a large collection of libraries. A library is like a ready-made toolbox. For data science, we use libraries like NumPy, Pandas, Matplotlib, Seaborn, and Scikit-learn. These libraries help us work with data, create charts, and build machine learning models.</p>
+  <p>Python is also cross-platform. This means Python code can run on Windows, macOS, and Linux. Python also has a large community, so learners can find documentation, tutorials, examples, and solutions easily.</p>
+
+  <table>
+    <tr><th>Feature</th><th>Simple Explanation</th></tr>
+    <tr><td>Easy syntax</td><td>Python code is readable and beginner-friendly.</td></tr>
+    <tr><td>Free</td><td>You can install and use Python without buying it.</td></tr>
+    <tr><td>Libraries</td><td>Python has ready-made tools for many tasks.</td></tr>
+    <tr><td>Cross-platform</td><td>Python can run on different operating systems.</td></tr>
+    <tr><td>Community</td><td>Many people use Python, so help is easy to find.</td></tr>
+  </table>
+
+  <h2>4. Real-World Uses of Python</h2>
+  <p>Python is used in many real-world areas. In web development, Python can be used to build websites and APIs. In automation, Python can perform repeated tasks like renaming files, reading Excel files, sending reports, or collecting data from websites.</p>
+  <p>In data science, Python is used to clean, analyze, and visualize data. For example, a company can use Python to understand sales data and find which product is performing well. In machine learning, Python is used to train models that can make predictions, such as predicting house prices, student marks, or customer behavior.</p>
+  <p>Python is also used in artificial intelligence, chatbots, cyber security, cloud computing, and testing. This is why learning Python opens many career and project opportunities.</p>
+
+  <h2>5. Installing Python and Choosing an Editor</h2>
+  <p>To write and run Python code, you need Python installed on your computer. You can download Python from the official website. During installation on Windows, it is important to select the option called <strong>Add Python to PATH</strong>. This helps your computer recognize the Python command in the terminal.</p>
+  <p>You also need a place to write code. This can be VS Code, Jupyter Notebook, PyCharm, or IDLE. For beginners, VS Code is a good editor for writing Python files. Jupyter Notebook is very useful for data science because it allows you to write code, see output, and write notes in the same place.</p>
+
+  <h3>How to Check Python Installation</h3>
+  <p>After installing Python, open terminal or command prompt and run this command:</p>
+
+  <span class="code-label">Terminal</span>
+  <pre><code>python --version</code></pre>
+
+  <p>If Python is installed correctly, you will see the Python version number. If the command does not work, Python may not be added to PATH, or the installation may need to be checked.</p>
+
+  <h2>6. Running a Python File</h2>
+  <p>A Python file usually ends with <span class="inline-code">.py</span>. For example, <span class="inline-code">day1.py</span> is a Python file. We write Python code inside this file, save it, and run it using the terminal.</p>
+  <p>The basic habit is simple: write code, save the file, run the file, and observe the output. Many beginners forget to save the file before running it. If your latest changes are not showing in output, first check whether the file is saved.</p>
+
+  <span class="code-label">Terminal</span>
+  <pre><code>python day1.py</code></pre>
+
+  <p>This command tells Python to run the file named <span class="inline-code">day1.py</span>. If the file has correct code, Python will show the output. If the file has a mistake, Python will show an error message.</p>
+
+  <h2>7. Your First Python Program</h2>
+  <p>Now let us write a simple Python program. This program will print a welcome message, take the student's name as input, store course details in variables, and print a small motivational output.</p>
+
+  <span class="code-label">examples/day1_practice.py</span>
+  <pre><code>print("Welcome to Day 1 of Python!")
+
+student_name = input("Enter your name: ")
+course_name = "Python for Data Science & Machine Learning"
+total_days = 15
+current_day = 1
+
+print("Hello", student_name)
+print("Course:", course_name)
+print("Today is Day", current_day, "out of", total_days)
+print("By Day 15, you will understand Python basics, data handling, and ML project flow.")
+print("Today's promise:", student_name, "will write Python code daily.")</code></pre>
+
+  <h3>Line-by-Line Explanation</h3>
+  <p>The first line uses <span class="inline-code">print()</span> to show a welcome message. The message is written inside double quotes because it is text. Text values in Python are called strings.</p>
+  <p>The second line uses <span class="inline-code">input()</span>. This function asks the user to type something. Whatever the user types is stored inside the variable named <span class="inline-code">student_name</span>. A variable is like a named box where we store a value.</p>
+  <p>The next three lines create variables. <span class="inline-code">course_name</span> stores the course title. <span class="inline-code">total_days</span> stores the number 15. <span class="inline-code">current_day</span> stores the number 1. These variables make the program easier to understand and update.</p>
+  <p>The last lines use <span class="inline-code">print()</span> again to show output. Some lines print fixed text, and some lines print variable values. When we use commas inside <span class="inline-code">print()</span>, Python prints the values with spaces between them.</p>
+
+  <div class="practice">
+    <h3>Practice 1</h3>
+    <p>Type this program yourself and run it. Then change the course name, total days, and promise message. Run the program again and observe the new output.</p>
+  </div>
+
+  <h2>8. Practical Program - Student Profile Generator</h2>
+  <p>This program is more interesting because it creates a small student profile. It asks for name, city, learning goal, and daily practice hours. Then it prints a clean profile summary. This is similar to how real applications collect user data and show a result.</p>
+
+  <span class="code-label">examples/day1_student_profile.py</span>
+  <pre><code>print("Student Profile Generator")
+print("-------------------------")
+
+name = input("Enter your name: ")
+city = input("Enter your city: ")
+goal = input("Enter your learning goal: ")
+daily_hours = input("How many hours will you practice daily? ")
+
+print("")
+print("Profile Summary")
+print("Name:", name)
+print("City:", city)
+print("Goal:", goal)
+print("Daily Practice:", daily_hours, "hours")
+print("Message:", name, "is ready to learn Python step by step.")</code></pre>
+
+  <h3>Explanation of the Student Profile Program</h3>
+  <p>The first two lines print a title and a separator. This makes the output look clean. Good output formatting is important because users should understand what the program is showing.</p>
+  <p>The next four lines collect input from the user. Each answer is stored in a different variable. The name goes into <span class="inline-code">name</span>, city goes into <span class="inline-code">city</span>, learning goal goes into <span class="inline-code">goal</span>, and daily practice hours goes into <span class="inline-code">daily_hours</span>.</p>
+  <p>The line <span class="inline-code">print("")</span> prints a blank line. This is used only to make the output easier to read. After that, the program prints a profile summary using labels and variable values.</p>
+  <p>The final message uses the student's name inside a sentence. This makes the output dynamic. Dynamic output means the output changes based on the user's input.</p>
+
+  <div class="practice">
+    <h3>Practice 2</h3>
+    <p>Add two more inputs to this program: age and college name. Then print both values in the profile summary. After that, add one final motivational sentence using the student's name.</p>
+  </div>
+
+  <h2>9. Common Beginner Errors</h2>
+  <p>Errors are normal in programming. Do not feel bad when you see an error. An error is feedback from Python. It tells you that something in the code needs to be fixed.</p>
+  <p>Common beginner errors include missing quotes, missing brackets, spelling mistakes, and forgetting to save the file. For example, <span class="inline-code">pritn("Hello")</span> is wrong because the correct spelling is <span class="inline-code">print</span>. Also, <span class="inline-code">print(Hello)</span> is wrong if Hello is text, because text should be inside quotes.</p>
+
+  <table>
+    <tr><th>Mistake</th><th>Wrong Code</th><th>Correct Code</th></tr>
+    <tr><td>Wrong spelling</td><td><span class="inline-code">pritn("Hi")</span></td><td><span class="inline-code">print("Hi")</span></td></tr>
+    <tr><td>Missing quotes</td><td><span class="inline-code">print(Hello)</span></td><td><span class="inline-code">print("Hello")</span></td></tr>
+    <tr><td>Missing bracket</td><td><span class="inline-code">print("Hi"</span></td><td><span class="inline-code">print("Hi")</span></td></tr>
+  </table>
+
+  <h2>10. Day 1 Summary</h2>
+  <div class="summary">
+    <p>Today you learned that programming means giving step-by-step instructions to a computer. You learned that an algorithm is a plan, and code is the written instruction in a programming language. You learned that Python is simple, powerful, and useful in many fields like data science, automation, web development, and machine learning.</p>
+    <p>You also learned how to write and run basic Python code. You used <span class="inline-code">print()</span> for output, <span class="inline-code">input()</span> for user input, and variables to store values. You wrote a first program and a student profile program. These are small programs, but they build the foundation for bigger projects.</p>
+  </div>
+
+  <h2>Homework</h2>
+  <p>Create a file named <span class="inline-code">my_day1_homework.py</span>. In this file, write a program that asks for your name, city, course, goal, and daily study time. Then print a clean summary. Run the program at least three times with different inputs.</p>
+
+  <span class="code-label">Homework Starter</span>
+  <pre><code>name = input("Enter your name: ")
+city = input("Enter your city: ")
+course = input("Enter your course: ")
+goal = input("Enter your goal: ")
+study_time = input("Enter daily study time: ")
+
+print("")
+print("My Day 1 Learning Summary")
+print("Name:", name)
+print("City:", city)
+print("Course:", course)
+print("Goal:", goal)
+print("Daily Study Time:", study_time)
+print(name, "has started the Python learning journey.")</code></pre>
+</main>
+</body>
+</html>

@@ -5,6 +5,7 @@ Classroom-ready Hinglish notes for Day 1 of a 15-day Python for Data Science and
 ## Files
 
 - `index.html` - Complete Day 1 teaching document with concepts, practicals, line-by-line code explanation, recap, and homework.
+- `learners-notes.html` - Simple English learner notes in paragraph format with code examples and practice tasks.
 - `examples/day1_practice.py` - Runnable Python practice file used in the lesson.
 - `examples/day1_student_profile.py` - Extra interesting practical for the 5-hour session.
 
